@@ -9,9 +9,9 @@ pipeline {
   }
     {
         stage ('Compile Stage')
-        agent {label 'maven'}
+        
         {
-
+            agent {label 'maven'}
             steps {
                 withMaven(maven : 'maven') {
                     sh 'mvn clean compile'
