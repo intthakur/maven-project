@@ -9,7 +9,7 @@ pipeline {
   }
     {
         stage ('Compile Stage')
-        
+        agent {label 'maven'}
         {
 
             steps {
