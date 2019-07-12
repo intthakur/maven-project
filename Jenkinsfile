@@ -11,7 +11,7 @@ pipeline
            {
               stage ('Compile Stage')
                 {
-                  agent {label 'ant'}
+                  
                   steps 
                    {
                      withAnt (installation: 'ant') 
