@@ -1,14 +1,12 @@
 pipeline {
     agent any
     stages {
-             stage ('SCM Checkout')
-             {
+             stage ('SCM Checkout'){
                  git 'https://github.com/intthakur/maven-project.git'
              }
            }
     
-              stage ('Compile Stage')
-             {
+              stage ('Compile Stage'){
                 agent {label 'maven'}
                 steps{
                     withMaven(maven : 'maven') 
@@ -17,8 +15,7 @@ pipeline {
                     }
                  }
        
-               stage ('Test')
-               {
+               stage ('Test'){
                   steps{
                       withMaven (maven: 'maven')
                       {
@@ -27,8 +24,7 @@ pipeline {
                    }
                 }
         
-               stage ('package')
-               {
+               stage ('package'){
                    steps{
                        withMaven (maven: 'maven')
                        {
@@ -37,11 +33,9 @@ pipeline {
                    }
                 }
         
-                stage ('deploy')
-                {
+                stage ('deploy'){
                     steps{
-                         sshagent (credentials: ['f4e16a40-403d-43c0-a139-e10a08f75938'])
-                         {
+                         sshagent (credentials: ['f4e16a40-403d-43c0-a139-e10a08f75938']){
                              sh 'scp -o StrictHostKeyChecking=no */target/*.war ec2-user@172.31.31.77:/var/lib/tomcat/webapps'
                          }
                     }
