@@ -5,7 +5,7 @@ pipeline {
                  git 'https://github.com/intthakur/maven-project.git'
              }
            }
-    {
+    
               stage('Compile Stage'){
                 agent {label 'maven'}
                 steps{
@@ -40,5 +40,5 @@ pipeline {
                          }
                     }
                 }   
-         }
+         
  }
