@@ -3,7 +3,7 @@
 <target name ="info">
 <echo> Welcome to Ant, Tushar </echo>
 </target>
-<target name="build">
-<echo message="building source code"/>
+<target name="package">
+<echo message="packaging source code"/>
 </target>
 </project>
