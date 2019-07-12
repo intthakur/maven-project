@@ -9,14 +9,14 @@ pipeline
                }
            }
            {
-              stage ('Compile Stage')
+              stage ('Clean work dirs')
                 {
                   
                   steps 
                    {
                      withAnt (installation: 'ant') 
                       {
-                        sh 'ant compile'
+                        sh 'ant clean'
                       }
                     }
                  }
