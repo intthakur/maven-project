@@ -10,8 +10,7 @@ pipeline {
               stage ('Compile Stage')
              {
                 agent {label 'maven'}
-                steps 
-                {
+                steps{
                     withMaven(maven : 'maven') 
                     {
                        sh 'mvn clean compile'
@@ -20,8 +19,7 @@ pipeline {
        
                stage ('Test')
                {
-                  steps 
-                  {
+                  steps{
                       withMaven (maven: 'maven')
                       {
                          sh 'mvn clean test'
@@ -31,8 +29,7 @@ pipeline {
         
                stage ('package')
                {
-                   steps
-                   {
+                   steps{
                        withMaven (maven: 'maven')
                        {
                           sh 'mvn package'
@@ -42,8 +39,7 @@ pipeline {
         
                 stage ('deploy')
                 {
-                    steps
-                    {
+                    steps{
                          sshagent (credentials: ['f4e16a40-403d-43c0-a139-e10a08f75938'])
                          {
                              sh 'scp -o StrictHostKeyChecking=no */target/*.war ec2-user@172.31.31.77:/var/lib/tomcat/webapps'
