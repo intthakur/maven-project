@@ -14,7 +14,7 @@ pipeline
                   agent {label 'ant'}
                   steps 
                    {
-                     withAnt(installtion : 'ant') 
+                     withAnt (installation: 'ant') 
                       {
                         sh 'ant clean compile'
                       }
