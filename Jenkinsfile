@@ -14,7 +14,7 @@ pipeline
                   agent {label 'ant'}
                   steps 
                    {
-                     withAnt(ant : 'ant') 
+                     withAnt(installtion : 'ant') 
                       {
                         sh 'ant clean compile'
                       }
@@ -24,7 +24,7 @@ pipeline
                  {
                    steps 
                     {
-                       withAnt (ant: 'ant')
+                       withAnt (installation: 'ant')
                         {
                           sh 'ant clean test'
                         }
@@ -35,7 +35,7 @@ pipeline
                   {
                     steps
                       {
-                         withAnt (ant: 'ant')
+                         withAnt (installation: 'ant')
                           {
                             sh 'ant package'
                           }
