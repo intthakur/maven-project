@@ -31,6 +31,16 @@ pipeline
                           }
                        }
                    }
+                stage ('archieve')
+                  {
+                    steps
+                      {
+                         withAnt (installation: 'ant')
+                          {
+                            sh 'ant war'
+                          }
+                       }
+                   }
                  stage ('deploy')
                    {
                       steps
