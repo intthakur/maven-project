@@ -1,5 +1,5 @@
 <?xml version = "1.0"?>
-<project name = "maven-project" default="info'>
+<project name = "maven-project" default="info">
 <target name ="info">
 <echo> Welcome to Ant, Tushar </echo>
 </target>
