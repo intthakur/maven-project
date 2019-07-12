@@ -16,7 +16,7 @@ pipeline
                    {
                      withAnt (installation: 'ant') 
                       {
-                        sh 'ant clean compile'
+                        sh 'ant compile'
                       }
                     }
                  }
@@ -26,7 +26,7 @@ pipeline
                     {
                        withAnt (installation: 'ant')
                         {
-                          sh 'ant clean test'
+                          sh 'ant test'
                         }
                      }
                   }
