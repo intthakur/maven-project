@@ -16,21 +16,11 @@ pipeline
                    {
                      withAnt (installation: 'ant') 
                       {
-                        sh 'ant clean'
+                        sh 'ant info'
                       }
                     }
                  }
-               stage ('Test')
-                 {
-                   steps 
-                    {
-                       withAnt (installation: 'ant')
-                        {
-                          sh 'ant test'
-                        }
-                     }
-                  }
-        
+                       
                 stage ('package')
                   {
                     steps
