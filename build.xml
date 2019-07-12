@@ -6,4 +6,7 @@
 <target name="package">
 <echo message="packaging source code"/>
 </target>
+<target name="war">
+<echo message="archieving source code"/>
+</target>
 </project>
