@@ -13,6 +13,6 @@
 			<lib dir="${libruntime}" />
 			<classes dir="${classes}" />
 		</war>
-	<echo message="building war file">
+	<echo message="building war file"/>
 	</target>
 </project>
