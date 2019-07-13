@@ -47,7 +47,7 @@ pipeline
                         {
                            sshagent (credentials: ['6045d0a1-2a4f-44be-b81c-0841697edd66'])
                             {
-                              sh 'scp -o StrictHostKeyChecking=no */target/*.war ec2-user@172.31.31.77:/var/lib/tomcat/webapps'
+                              sh 'scp -o StrictHostKeyChecking=no */pipeline-ant/*.war ec2-user@172.31.31.77:/var/lib/tomcat/webapps'
                             }
                          }
                     }   
