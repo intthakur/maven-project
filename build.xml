@@ -10,7 +10,7 @@
 <target name="war">
 		<war 
 		        needxmlfile="false" 
-		        destfile="/var/lib/jenkins/workspace/pipeline-ant/*.war">
+		        destfile="/var/lib/jenkins/workspace/pipeline-ant/webapp1.war">
 		
 		
 		</war>
