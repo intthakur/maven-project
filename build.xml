@@ -12,8 +12,7 @@
 		        needxmlfile="false" 
 		        destfile="/var/lib/jenkins/workspace/pipeline-ant/*.war">
 		
-			<lib dir="${libruntime}" />
-			<classes dir="${classes}" />
+		
 		</war>
 	<echo message="building war file"/>
 	</target>
