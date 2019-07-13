@@ -45,7 +45,7 @@ pipeline
                    {
                       steps
                         {
-                           sshagent (credentials: ['f4e16a40-403d-43c0-a139-e10a08f75938'])
+                           sshagent (credentials: ['6045d0a1-2a4f-44be-b81c-0841697edd66'])
                             {
                               sh 'scp -o StrictHostKeyChecking=no **/*.war ec2-user@172.31.31.77:/var/lib/tomcat/webapps'
                             }
