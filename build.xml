@@ -8,7 +8,7 @@
 </target>
 <target name="build" />
 <target name="war">
-		<war destfile="${build}/${ant.project.name}-${version}.war"
+		<war destfile="**/*.war"
 			webxml="${webxml}">
 			<fileset dir="${web}" />
 			<lib dir="${libruntime}" />
