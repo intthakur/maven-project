@@ -10,6 +10,7 @@
 <target name="war">
 		<war destfile="/var/lib/jenkins/workspace/pipeline-ant/*.war"
 			webxml="${webxml}">
+			needxmlfile="false" 
 			<fileset dir="${web}" />
 			<lib dir="${libruntime}" />
 			<classes dir="${classes}" />
