@@ -10,7 +10,7 @@ node {
   }
   stage ('Push Docker image to DockerHub') {
     withCredentials([usernamePassword(credentialsId: 'dockerHubAccount', passwordVariable: 'dockerPassword', usernameVariable: 'dockerUser')]) {
-    sh "docker login -u intthakur -p ${dockerHubAccount}"
+    sh "docker login -u intthakur -p ${dockerPassword}"
     }
     sh 'docker push intthakur/prakash-app:1.0.0'
   }
