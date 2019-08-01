@@ -2,4 +2,10 @@ node {
   stage ('SCM checkout'){
     git 'https://github.com/intthakur/maven-project.git'
   }
+  stage ('package stage'){
+    sh label: '', script: 'mvn clean package'
+  }
+  stage ('docker image build'){
+    sh 'docker build -t intthakur/prakash-app:1.0.0 .'
+  }
 }
