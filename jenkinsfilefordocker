@@ -8,4 +8,10 @@ node {
   stage ('docker image build'){
     sh 'docker build -t intthakur/prakash-app:1.0.0 .'
   }
+  stage ('Push Docker image to DockerHub') {
+    withCredentials([string(credentialsId: 'dockerhubaccount', variable: 'dockerhubaccount')]) {
+    sh "docker login -u intthakur -p ${dockerhubaccount}"
+    }
+    sh 'docker push intthakur/prakash-app:1.0.0'
+  }
 }
