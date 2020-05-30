@@ -5,7 +5,7 @@ stages
 {
     stage('compile source code')
    {   steps {  
-           withMaven(jdk: 'localjava', maven: 'localmaven') {
+           withMaven(jdk: 'localjava-8', maven: 'localmaven') {
                sh 'mvn compile'
 }  }
    } 
