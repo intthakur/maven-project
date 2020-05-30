@@ -41,15 +41,6 @@ pipeline
                           }
                        }
                    }
-                 stage ('deploy')
-                   {
-                      steps
-                        {
-                           sshagent (credentials: ['6045d0a1-2a4f-44be-b81c-0841697edd66'])
-                            {
-                              sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/pipeline-ant/webapp1.war ec2-user@172.31.31.77:/var/lib/tomcat/webapps'
-                            }
-                         }
-                    }   
+                
             }
 }
