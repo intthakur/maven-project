@@ -3,13 +3,7 @@ pipeline
 agent any
 stages
 {
-  stage('scm checkout')
-    { steps {  git branch: 'master', url: 'https://github.com/intthakur/maven-project/'
-
-            }
-    }
-
-   stage('compile source code')
+    stage('compile source code')
    {   steps {  
            withMaven(jdk: 'localjava', maven: 'localmaven') {
                sh 'mvn compile'
